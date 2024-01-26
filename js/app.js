@@ -38,7 +38,7 @@ const album1 = {
   
   // Exercise 3: Accessing the string 'LP' from album2's formats array, add it to the end of album3's formats array.
   
-  const lpFormat = album2.albumDetails.format[0]
+  const lpFormat = album2.albumDetails.formats[0]
   album3.albumDetails.formats.push(lpFormat)
   
   
@@ -46,7 +46,8 @@ const album1 = {
   
   
   
-  
+  album3.albumDetails.released  = new Date(album3.albumDetails.released)
+  console.log(album3)
   const album4 = {
     title: 'Remain in Light',
     albumDetails: {
@@ -57,7 +58,8 @@ const album1 = {
   
   // Exercise 5:  Add a property named label with the value 'Sire' to album4's albumDetails property
   
-  
+  album4.albumDetails.label = "Sire"
+  console.log(album4.albumDetails.label)
   
   
   const album5 = {
@@ -71,7 +73,7 @@ const album1 = {
   
   // Exercise 6:  Update the value 'emi' within album5's labels array to 'EMI'
   
-  
+album5.albumDetails.labels[1] = "EMI" 
   
   
   const album6 = {
@@ -85,7 +87,8 @@ const album1 = {
   
   // Exercise 7:  Assign album6's formats array to a variable named formats
   
-  
+ const formats = album6.albumDetails.formats 
+ console.log(formats)
   
   
   const album7 = {
@@ -109,15 +112,41 @@ const album1 = {
   
   // Exercise 8:  Using the talkingHeadsAlbums array, assign album5's labels property to a variable named labels
   
-  
+ const labels = talkingHeadsAlbums[4].albumDetails.labels
+
+ console.log(labels)
   
   
   // Exercise 9:  Using the talkingHeadsAlbums array, assign album7's released property to album6's released property
   
-  
+talkingHeadsAlbums[5].albumDetails.released =   talkingHeadsAlbums[6].albumDetails.released
+
+
+console.log(album6)
+
   
   
   // Exercise 10:  Using the pre-defined variable named albumIdx below, assign the albumDetails object of the album located within the talkingHeadsAlbums array at the index represented by the value of albumIdx to a variable named albumDetails
   
   let albumIdx = 4;
+  
+  const albumDetails = talkingHeadsAlbums[albumIdx].albumDetails
+  console.log(albumDetails)
+
+
+// const colors = ["red", "blue", "greeen"]
+
+//   function longestStringArray(arr){
+//     length = 0;
+//     for(let i = 0; i < colors.length; i += 1){
+//         if(longestStringArray[i].length > length){
+//             length = longestStringArray[i]
+//         }
+
+//     }
+
+//     return length
+        
+//     }
+
   
